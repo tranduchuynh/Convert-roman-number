@@ -19,11 +19,13 @@ function main() {
 		input.value = '';
 	}
 	
-	document.getElementById('result').innerHTML = checkPalindrome;
+	return document.getElementById('result').innerHTML = checkPalindrome;
 }
 
 let check = document.getElementById('check-btn');
-check.addEventListener('click', main);
+if(check) {
+	check.addEventListener('click', main);
+}
 
 /*-------------------------------------------------------------------------------------------------*/
 function convertToRoman(num) {
@@ -44,13 +46,14 @@ function mainRoman() {
 	let newInput = input.value;
 	let convertRoman = '';
 	if(newInput === '') {
-		alert('This string is not empty')
+		alert('This string is not empty || not number');
+		input.value = '';
 	}else {
 		convertRoman = convertToRoman(newInput);
 		input.value = '';
 	}
 	
-	document.getElementById('result-roman').innerHTML = convertRoman;
+	 return document.getElementById('result-roman').innerHTML = convertRoman;
 }
 
 let convert = document.getElementById('convert-btn');
