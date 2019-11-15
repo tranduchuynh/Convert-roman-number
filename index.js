@@ -94,7 +94,9 @@ function rot13() {
 /*-------------------------------------------------------------------------------------------------*/
 
 let binary = document.getElementById('convert-binary-btn');
-binary.addEventListener('click', binaryAgents);
+if(binary) {	
+	binary.addEventListener('click', binaryAgents);
+}
 
 function binaryAgents() {
 	let input = document.getElementById('binary');
@@ -116,7 +118,9 @@ function binaryAgents() {
 /*-------------------------------------------------------------------------------------------------*/
 
 let fah = document.getElementById('convert-celsius-btn');
-fah.addEventListener('click', convertToF);
+if(fah) {
+	fah.addEventListener('click', convertToF);
+}
 
 function convertToF() {
 	let input = document.getElementById('celsius');
