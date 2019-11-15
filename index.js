@@ -57,13 +57,16 @@ function mainRoman() {
 }
 
 let convert = document.getElementById('convert-btn');
-convert.addEventListener('click', mainRoman);
+if(convert) {
+	convert.addEventListener('click', mainRoman);
+}
 
 /*-------------------------------------------------------------------------------------------------*/
 
 let rot = document.getElementById('convert-rot-btn');
-rot.addEventListener('click', rot13);
-
+if(rot) {
+	rot.addEventListener('click', rot13);
+}
 function rot13() {
 	let input = document.getElementById('rot');
 	let newInput = input.value;
